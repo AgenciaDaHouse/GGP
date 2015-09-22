@@ -1,0 +1,16 @@
+mixin header
+  header.c-header
+    .c-header__wrapper.h-limiter
+      h1.c-header__logo
+        img.img(src='/img/logo.png', alt='GGP Marcas & Patentes')
+
+      section.c-header__nav-holder
+        nav.c-header__main-nav
+          each item, index in mainNav
+            li.c-header__main-nav__item.h-im(class=!index ? 'active' : '')
+              a.c-header__main-nav__link(href=item.url, title=item.label, class=!index ? 'active' : '') #{item.label}
+
+        nav.c-header__social-nav
+          each item in socialNav
+            li.c-header__social-nav__item.h-im
+              a.c-header__social-nav__link.u-icon.h-im(href=item.url, title=item.label) #{item.icon}

@@ -1,0 +1,72 @@
+.c-header
+  background $color-brand
+  padding-bottom 6rem
+
+  &__wrapper
+    display flex
+
+  &__logo
+    background #fff
+    padding 2.5rem 2rem 2rem
+    margin-top -0.5rem
+    transform skewX(-15deg) 'skewY(%s)' % $angle-horz
+
+    .img
+      transform skewX(15deg) 'skewY(%s)' % ($angle-horz *-1)
+
+  &__nav-holder
+    align-items center
+    display flex
+    flex 1
+
+  &__main-nav
+    flex 1
+    text-align center
+
+    &__item
+      color $color-accent
+      margin 0 0.1rem
+
+      &:not(:last-child):after
+        content: '|'
+        margin-left 0.3rem
+
+      &.active:after
+        display none
+
+    &__link
+      font-size rem(14)
+      text-transform uppercase
+
+      &.active
+        background $color-accent
+        color $color-brand
+        padding 0.25rem 0.5rem
+
+  &__social-nav
+    background $color-accent
+    border-radius 0 1rem 1rem 0
+    padding 1.25rem 1.25rem 1.25rem 1.75rem
+    position relative
+
+    &:before
+      border-style solid
+      border-width 4.25rem 1.5rem 0 0
+      border-color $color-brand transparent transparent transparent
+      content ''
+      position absolute
+      transform rotate(360deg)
+      size 0
+      top 0
+      left 0
+
+    &__item
+      margin-left 0.5rem
+
+      &:first-child
+        margin-left 0
+        margin-top -0.2rem
+
+    &__link
+      color $color-brand
+      font-size rem(14)
