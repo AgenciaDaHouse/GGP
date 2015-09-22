@@ -1,0 +1,72 @@
+.u-grid
+  $gutter = 1rem
+
+  display flex
+  flex-wrap wrap
+  margin-top -($gutter / 2)
+
+  +breakpoint(md)
+    margin-left $gutter * -1
+
+  > .u-grid__cell
+    flex 0 0 100%
+    padding-top ($gutter / 2)
+
+    +breakpoint(md)
+      flex 1
+      padding $gutter 0 0 $gutter
+
+      &--1-2
+        flex 0 0 50%
+
+      &--1-5
+        flex 0 0 20%
+
+      &--2-5
+        flex 0 0 40%
+
+      &--3-5
+        flex 0 0 60%
+
+      &--1-3
+        flex 0 0 33.3333%
+
+    &.is-dummy
+      flex none
+
+  &--not-responsive
+    margin-left -($gutter)
+
+    > .u-grid__cell
+      flex 1
+      padding-left $gutter
+
+      &.is-dummy
+        flex none
+
+  &--no-gutter
+    margin-top 0
+
+    +breakpoint(md)
+      margin-left 0
+
+    > .u-grid__cell
+      padding 0
+
+      +breakpoint(md)
+        padding 0
+
+  &--doubled-gutter
+    margin-top -($gutter*2 / 2)
+
+    +breakpoint(md)
+      margin-left $gutter*2 * -1
+
+    > .u-grid__cell
+      padding-top ($gutter*2 / 2)
+
+      +breakpoint(md)
+        padding $gutter*2 0 0 $gutter*2
+
+  &.is-centered
+    align-items center

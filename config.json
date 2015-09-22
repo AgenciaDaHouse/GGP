@@ -1,0 +1,9 @@
+{
+  "APP_NAME": "GGP",
+  "APP_PORT": 4000,
+
+  "SRC_PATH": "./src",
+  "DIST_PATH": "./public",
+
+  "GA_CODE": "UA-x"
+}
