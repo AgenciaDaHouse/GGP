@@ -2,10 +2,12 @@
 extends ../layouts/default
 
 //- dependencies
+include ../../src/components/banner/banner
 include ../../src/components/footer/footer
 include ../../src/components/header/header
 
 //- markup
 block content
   +header
+  +banner
   +footer
