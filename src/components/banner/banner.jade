@@ -1,5 +1,10 @@
-mixin banner
-  section.c-banner
-    ul.c-banner__items
-      li.c-banner__item
-        img.img(src='http://lorempixel.com/1400/600/')
+mixin banner(data)
+  section.c-banner.swiper-container
+    ul.c-banner__items.swiper-wrapper
+      each item in data
+        - image = item.image
+        li.c-banner__item.swiper-slide
+          img.img(src=image.url, width=image.width, height=image.height)
+
+    .swiper-button-next.swiper-button-white.c-banner__nav.c-banner__nav--next
+    .swiper-button-prev.swiper-button-white.c-banner__nav.c-banner__nav--prev

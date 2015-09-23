@@ -14,8 +14,7 @@ var Banner = new keystone.List('Banner', {
 
 Banner.add({
   name: { type: String, required: true },
-  textTop: { type: String },
-  textBottom: { type: String },
+  index: { type: Number },
   image: { type: Types.CloudinaryImage }
 })
 

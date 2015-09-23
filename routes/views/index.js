@@ -23,7 +23,7 @@ exports = module.exports = function (req, res) {
       .sort('sortOrder')
 
     banners.exec(function (err, results) {
-      locals.banners = results
+      locals.banners = _.sortBy(results, 'index')
       next(err)
     })
   })
