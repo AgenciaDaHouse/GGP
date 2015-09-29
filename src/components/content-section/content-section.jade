@@ -1,5 +1,14 @@
+//- dependencies
+include ../content-heading/content-heading.jade
+
 mixin content-section(data)
+  - image = data.image.url
   section.c-content-section
-    .c-content-section__wrapper.h-limiter
-      h2.c-content-section__heading #{data.name}
+    .c-content-section__wrapper.h-limiter.h-group
+      +content-heading(data.name)
+
+      if image
+        figure.c-content-section__image
+          img(src=image)
+
       .c-content-section__content !{data.content}

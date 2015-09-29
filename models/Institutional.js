@@ -8,7 +8,7 @@ var Types = keystone.Field.Types
  * model
  */
 var Institutional = new keystone.List('Institutional', {
-  autokey: { from: 'reference', path: 'reference', unique: true },
+  autokey: { from: 'reference', path: 'key', unique: true },
   defaultSort: '-index'
 })
 
