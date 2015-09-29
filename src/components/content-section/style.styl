@@ -1,0 +1,26 @@
+.c-content-section
+  overflow-x hidden
+
+  &__wrapper
+    padding-top 4rem
+    position relative
+
+  &__heading
+    background-image linear-gradient(to left, $color-text, rgba($color-text, 0))
+    backface-visibility hidden
+    color #fff
+    font-size rem(14)
+    padding 0.5rem 0.75rem
+    position absolute
+    left -12rem
+    top 0.75rem
+    text-align right
+    text-transform uppercase
+    transform 'skewY(%s)' % $angle-horz
+    width 20rem
+
+  &__content
+    color $color-text
+    font-size rem(14)
+    line-height 1.5
+    padding 1rem 4rem

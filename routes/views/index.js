@@ -28,5 +28,18 @@ exports = module.exports = function (req, res) {
     })
   })
 
+  view.on('init', function (next) {
+    var institutional = keystone
+      .list('Institutional')
+      .model
+      .find()
+      .sort('sortOrder')
+
+    institutional.exec(function (err, results) {
+      locals.institutional = _.indexBy(results, 'reference')
+      next(err)
+    })
+  })
+
   view.render('index')
 }

@@ -3,6 +3,7 @@ extends ../layouts/default
 
 //- dependencies
 include ../../src/components/banner/banner
+include ../../src/components/content-section/content-section
 include ../../src/components/footer/footer
 include ../../src/components/header/header
 
@@ -12,6 +13,6 @@ block content
   +banner(banners)
 
   .c-content
-    p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita molestias saepe illum maxime, corrupti perferendis, ipsum beatae, minus pariatur totam asperiores ex harum, fuga. Ipsam voluptate, non unde veniam deleniti!
+    +content-section(institutional['about-us'])
 
   +footer
