@@ -1,0 +1,14 @@
+//- dependencies
+include ../content-heading/content-heading
+include ../content-section/content-section
+
+mixin services()
+  .c-services
+    header.c-services__header.h-limiter
+      +content-heading('Serviços')
+
+    ul.c-services__items
+      - serviceSettings = { simpleHeading: true, baseClass: 'c-services__item-content', imageClass: 'c-services__item-image' }
+      each item in services
+        li.c-services__item
+          +content-section(item, serviceSettings)

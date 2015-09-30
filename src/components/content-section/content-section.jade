@@ -1,14 +1,20 @@
 //- dependencies
 include ../content-heading/content-heading.jade
 
-mixin content-section(data)
+mixin content-section(data, settings)
+  - settings = settings || {}
   - image = data.image.url
-  section.c-content-section
+
+  section.c-content-section(class=settings.baseClass || '')
     .c-content-section__wrapper.h-limiter.h-group
-      +content-heading(data.name)
 
       if image
-        figure.c-content-section__image
+        figure.c-content-section__image(class=settings.imageClass || '')
           img(src=image)
+
+      if settings.simpleHeading
+        h3.c-content-section__heading #{data.name}
+      else
+        +content-heading(data.name)
 
       .c-content-section__content !{data.content}

@@ -41,5 +41,18 @@ exports = module.exports = function (req, res) {
     })
   })
 
+  view.on('init', function (next) {
+    var services = keystone
+      .list('Service')
+      .model
+      .find()
+      .sort('sortOrder')
+
+    services.exec(function (err, results) {
+      locals.services = results
+      next(err)
+    })
+  })
+
   view.render('index')
 }

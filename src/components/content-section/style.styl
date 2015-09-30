@@ -1,18 +1,23 @@
 .c-content-section
   background-position bottom -500px
   background-repeat no-repeat
+  color $color-text
   overflow-x hidden
 
   &__wrapper
     padding-top 4rem
     position relative
 
+  &__heading
+    padding 0 4rem
+    text-transform uppercase
+
   &__image
-    margin 10rem -2rem 0 2rem
-    float right
+    &.company
+      float right
+      margin 12rem -2rem 0 2rem
 
   &__content
-    color $color-text
     font-size rem(14)
     line-height 1.5
     padding 1rem 4rem

@@ -6,6 +6,7 @@ include ../../src/components/banner/banner
 include ../../src/components/content-section/content-section
 include ../../src/components/footer/footer
 include ../../src/components/header/header
+include ../../src/components/services/services
 
 //- markup
 block content
@@ -14,6 +15,7 @@ block content
 
   .c-content
     +content-section(institutional['about-us'])
-    +content-section(institutional.company)
+    +content-section(institutional.company, { imageClass: 'company' })
+    +services
 
   +footer

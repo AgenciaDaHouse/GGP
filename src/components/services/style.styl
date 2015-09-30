@@ -1,0 +1,38 @@
+.c-services
+  $imageMargin= 2rem
+
+  &__header
+    position relative
+    z-index 1
+
+  .c-content-section__wrapper
+    padding-bottom 4rem
+
+  &__item
+    background #fff
+    border-top 0.25rem solid darken(#fff, 15)
+    margin-top -2.5rem
+
+    &:nth-child(odd)
+      transform 'skewY(%s)' % $angle-horz
+
+      .c-services__item
+        &-content
+          transform 'skewY(%s)' % ($angle-horz * -1)
+
+        &-image
+          float left
+          margin-right $imageMargin
+          margin-left $imageMargin * -1
+
+    &:nth-child(even)
+      transform 'skewY(%s)' % ($angle-horz * -1)
+
+      .c-services__item
+        &-content
+          transform 'skewY(%s)' % $angle-horz
+
+        &-image
+          float right
+          margin-right $imageMargin * -1
+          margin-left $imageMargin
