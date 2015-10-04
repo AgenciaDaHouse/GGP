@@ -1,2 +1,6 @@
-mixin content-heading(heading)
-  h2.c-content-heading #{heading}
+mixin content-heading(heading, hasWrapper)
+  if hasWrapper
+    header.c-content-heading-wrapper.h-limiter
+      h2.c-content-heading #{heading}
+  else
+    h2.c-content-heading #{heading}

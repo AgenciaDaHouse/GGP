@@ -4,8 +4,7 @@ include ../content-section/content-section
 
 mixin services()
   .c-services
-    header.c-services__header.h-limiter
-      +content-heading('Serviços')
+    +content-heading('Serviços', true)
 
     ul.c-services__items
       - serviceSettings = { simpleHeading: true, baseClass: 'c-services__item-content', imageClass: 'c-services__item-image' }

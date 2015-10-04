@@ -1,0 +1,12 @@
+//- dependencies
+include ../content-heading/content-heading
+
+mixin clients()
+  .c-clients
+    +content-heading('Clientes', true)
+
+    .c-clients__wrapper.h-limiter
+      ul.u-grid
+        each item in clients
+          li.c-clients__item.u-grid__cell.u-grid__cell--1-3
+            img(src=item.image.url, alt=item.name, title=item.name)

@@ -15,41 +15,39 @@ exports = module.exports = function (req, res) {
 
   locals.section = 'home'
 
-  view.on('init', function (next) {
-    var banners = keystone
-      .list('Banner')
+  function getModel (name, callback) {
+    return keystone
+      .list(name)
       .model
       .find()
       .sort('sortOrder')
+      .exec(callback)
+  }
 
-    banners.exec(function (err, results) {
+  view.on('init', function (next) {
+    getModel('Banner', function (err, results) {
       locals.banners = _.sortBy(results, 'index')
       next(err)
     })
   })
 
   view.on('init', function (next) {
-    var institutional = keystone
-      .list('Institutional')
-      .model
-      .find()
-      .sort('sortOrder')
-
-    institutional.exec(function (err, results) {
+    getModel('Institutional', function (err, results) {
       locals.institutional = _.indexBy(results, 'reference')
       next(err)
     })
   })
 
   view.on('init', function (next) {
-    var services = keystone
-      .list('Service')
-      .model
-      .find()
-      .sort('sortOrder')
-
-    services.exec(function (err, results) {
+    getModel('Service', function (err, results) {
       locals.services = results
+      next(err)
+    })
+  })
+
+  view.on('init', function (next) {
+    getModel('Client', function (err, results) {
+      locals.clients = results
       next(err)
     })
   })
