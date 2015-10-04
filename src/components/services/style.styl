@@ -1,6 +1,27 @@
 .c-services
   $imageMargin= 2rem
 
+  position relative
+
+  &:before,
+  &:after
+    content ''
+    position absolute
+    width 100%
+    transform 'skewY(%s)' % $angle-horz
+    z-index 1
+
+  &:before
+    background $color-brand
+    bottom 1rem
+    height 1.25rem
+
+  &:after
+    background $color-accent
+    border-bottom 0.4rem solid $color-accent-darker
+    bottom 0
+    height 1rem
+
   &__header
     position relative
     z-index 1
