@@ -1,0 +1,12 @@
+//- dependencies
+include ../content-heading/content-heading
+
+mixin questions()
+  .c-questions
+    +content-heading('Dúvidas', true)
+
+    ul.c-questions__wrapper.h-limiter
+      each item in questions
+        li.c-questions__item
+          h4.c-questions__heading #{item.name}
+          .c-questions__content !{item.content}

@@ -52,5 +52,12 @@ exports = module.exports = function (req, res) {
     })
   })
 
+  view.on('init', function (next) {
+    getModel('Question', function (err, results) {
+      locals.questions = results
+      next(err)
+    })
+  })
+
   view.render('index')
 }
