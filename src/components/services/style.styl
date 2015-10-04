@@ -6,12 +6,16 @@
     z-index 1
 
   .c-content-section__wrapper
+    padding-top 2rem
     padding-bottom 4rem
+
+  &__items
+    margin-top 4rem
 
   &__item
     background #fff
     border-top 0.25rem solid darken(#fff, 15)
-    margin-top -2.5rem
+    margin-top -6.5rem
 
     &:nth-child(odd)
       transform 'skewY(%s)' % $angle-horz
@@ -36,3 +40,6 @@
           float right
           margin-right $imageMargin * -1
           margin-left $imageMargin
+
+  &__item-image
+    margin-top 2rem
