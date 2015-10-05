@@ -9,12 +9,11 @@ var Types = keystone.Field.Types
  */
 var Banner = new keystone.List('Banner', {
   autokey: { from: 'name', path: 'key', unique: true },
-  defaultSort: '-index'
+  sortable: true
 })
 
 Banner.add({
   name: { type: String, required: true },
-  index: { type: Number },
   image: { type: Types.CloudinaryImage }
 })
 

@@ -15,20 +15,21 @@ exports = module.exports = function (req, res) {
 
   locals.section = 'home'
 
-  function getModel (name, callback) {
+  function getModel (name, keyOrCallback, next) {
     return keystone
       .list(name)
       .model
       .find()
       .sort('sortOrder')
-      .exec(callback)
+      .exec(_.isFunction(keyOrCallback) ? keyOrCallback :
+        function (err, results) {
+          locals[keyOrCallback] = results
+          next(err)
+      })
   }
 
   view.on('init', function (next) {
-    getModel('Banner', function (err, results) {
-      locals.banners = _.sortBy(results, 'index')
-      next(err)
-    })
+    getModel('Banner', 'banners', next)
   })
 
   view.on('init', function (next) {
@@ -39,24 +40,15 @@ exports = module.exports = function (req, res) {
   })
 
   view.on('init', function (next) {
-    getModel('Service', function (err, results) {
-      locals.services = results
-      next(err)
-    })
+    getModel('Service', 'services', next)
   })
 
   view.on('init', function (next) {
-    getModel('Client', function (err, results) {
-      locals.clients = results
-      next(err)
-    })
+    getModel('Client', 'clients', next)
   })
 
   view.on('init', function (next) {
-    getModel('Question', function (err, results) {
-      locals.questions = results
-      next(err)
-    })
+    getModel('Question', 'questions', next)
   })
 
   view.render('index')
