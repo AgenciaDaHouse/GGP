@@ -1,0 +1,38 @@
+mixin contact-form()
+  form.c-contact-form(method='post', action='/contact')
+    h3.c-contact-form__heading Pesquise sua marca!
+
+    .c-contact-form__wrapper
+      .c-contact-form__row
+        p.c-contact-form__label * Nome do solicitante:
+        input.c-contact-form__field(type='text', name='name', required)
+
+      .c-contact-form__row
+        p.c-contact-form__label * E-mail:
+        input.c-contact-form__field(type='email', name='email', required)
+
+      .c-contact-form__row
+        p.c-contact-form__label * Telefone para contato (DDD):
+        input.c-contact-form__field(type='phone', name='phone', required, placeholder='Ex.: (DDD) 0000 0000')
+
+      .c-contact-form__row
+        p.c-contact-form__label CNPJ/CPF:
+        input.c-contact-form__field(type='text', name='register')
+
+      .c-contact-form__row
+        p.c-contact-form__label * Nome da marca:
+        input.c-contact-form__field(type='text', name='brand', required)
+
+      .c-contact-form__row
+        p.c-contact-form__label Envie seu logotipo (se ouver):
+        input.c-contact-form__field(type='file', name='brand', required)
+
+      .c-contact-form__row
+        p.c-contact-form__label * Descreva quais produtos/serviços?
+        textarea.c-contact-form__field(name='messge', required)
+
+      .c-contact-form__row
+        p.c-contact-form__info * Preenchimento obrigatório
+        .c-contact-form__controls
+          button.c-contact-form__button(type='submit') Enviar
+          button.c-contact-form__button(type='reset') Cancelar

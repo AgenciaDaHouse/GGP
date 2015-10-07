@@ -1,0 +1,5 @@
+mixin social-nav()
+  nav.c-social-nav
+    each item in socialNav
+      li.c-social-nav__item
+        a.c-social-nav__icon.icon(class='icon--#{item.icon}', href=item.url, title=item.label)

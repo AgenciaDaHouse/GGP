@@ -1,0 +1,21 @@
+mixin address()
+  .c-address
+    .c-address__group
+      i.c-address__icon.c-address__icon--map
+      .c-address__content
+        p Av.: Maringá, 1995 Sl 05 Térreo
+        p Jd.: Vitória | Londrina-PR
+        p CEP: 86060-000
+
+    .c-address__group
+      i.c-address__icon.c-address__icon--phone
+      .c-address__content
+        p
+          span 43
+          = ' 3324-8571'
+
+    .c-address__group
+      i.c-address__icon.c-address__icon--email
+      .c-address__content
+        - email= 'contato@ggpmarcas.com.br'
+        a(href='mailto:#{email}') #{email}

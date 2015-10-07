@@ -1,0 +1,36 @@
+.c-contact
+  margin-top 4rem
+
+  &__wrapper
+    padding 6rem 8rem 2rem
+
+  &__heading
+    border 2px dotted
+    border-left none
+    color $color-text
+    font-weight 300
+    margin -2rem 0 2rem
+    padding 0.75rem 1rem
+    position relative
+    text-transform uppercase
+
+    &:after,
+    &:before
+      content ''
+      position absolute
+
+    &:before
+      border 2px dotted
+      border-right none
+      size 0.75rem 1.5rem
+      top -2px
+      left -0.85rem
+
+    &:after
+      $w= 0.45rem
+      border-top $w solid transparent
+      border-bottom @border-top
+      border-left $w solid $color-text
+      left 0
+      top 1.35rem - $w
+      size 0
