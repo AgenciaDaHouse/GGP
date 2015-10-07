@@ -29,10 +29,10 @@ mixin contact-form()
 
       .c-contact-form__row
         p.c-contact-form__label * Descreva quais produtos/serviços?
-        textarea.c-contact-form__field(name='messge', required)
+        textarea.c-contact-form__field.c-contact-form__field--textarea(name='messge', required)
 
-      .c-contact-form__row
+      .c-contact-form__row.h-group
         p.c-contact-form__info * Preenchimento obrigatório
-        .c-contact-form__controls
+        .c-contact-form__controls.h-group
           button.c-contact-form__button(type='submit') Enviar
           button.c-contact-form__button(type='reset') Cancelar

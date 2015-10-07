@@ -1,0 +1,58 @@
+.c-contact-form
+  background $color-accent-darker
+  padding 0.25rem
+
+  &__heading
+    color $color-accent
+    font-size 2.25rem
+    padding 0.125rem 0 0.25rem
+    text-align center
+    text-transform uppercase
+    text-shadow 0 2px 2px rgba(0,0,0,0.25)
+
+  &__wrapper
+    background $color-brand
+    padding 1rem
+
+  &__row
+    margin-top 0.75rem
+
+    &:first-child
+      margin-top 0
+
+  &__label
+    color #fff
+    font-size rem(12)
+    margin-bottom 0.2rem
+    text-transform uppercase
+
+  &__field
+    border none
+    padding 0.3rem
+    width 100%
+
+    &--textarea
+      height 8rem
+
+  &__info
+    color #fff
+    font-size rem(10)
+    margin-top -0.5rem
+    text-transform uppercase
+
+  &__controls
+    float right
+
+  &__button
+    background none
+    border none
+    color #fff
+    float left
+    margin 0
+    padding 0.25rem
+    text-transform uppercase
+
+    + .c-contact-form__button
+      &:before
+        content '|'
+        margin-right 0.5rem
