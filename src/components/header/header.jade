@@ -1,3 +1,6 @@
+//- dependencies
+include ../social-nav/social-nav
+
 mixin header
   header.c-header
     .c-header__wrapper.h-limiter
@@ -10,7 +13,4 @@ mixin header
             li.c-header__main-nav__item.h-im(class=!index ? 'active' : '')
               a.c-header__main-nav__link(href=item.url, title=item.label, class=!index ? 'active' : '') #{item.label}
 
-        nav.c-header__social-nav
-          each item in socialNav
-            li.c-header__social-nav__item.h-im
-              a.c-header__social-nav__link.u-icon.h-im(href=item.url, title=item.label) #{item.icon}
+        +social-nav('c-social-nav--header')
