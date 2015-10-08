@@ -6,9 +6,19 @@
     color $color-accent
     font-size 2.25rem
     padding 0.125rem 0 0.25rem
+    position relative
     text-align center
     text-transform uppercase
     text-shadow 0 2px 2px rgba(0,0,0,0.25)
+
+    &:before
+      background $color-accent-darker url(/img/icon.png) no-repeat center
+      border-radius 50%
+      content ''
+      position absolute
+      size 6rem
+      left -5rem
+      top -1.5rem
 
   &__wrapper
     background $color-brand
@@ -33,6 +43,9 @@
 
     &--textarea
       height 8rem
+
+  &__file
+    background #fff
 
   &__info
     color #fff

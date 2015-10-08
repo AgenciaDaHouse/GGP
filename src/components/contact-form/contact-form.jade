@@ -25,7 +25,8 @@ mixin contact-form()
 
       .c-contact-form__row
         p.c-contact-form__label Envie seu logotipo (se ouver):
-        input.c-contact-form__field(type='file', name='brand', required)
+        .c-contact-form__file
+          input.c-contact-form__field(type='file', name='brand', required)
 
       .c-contact-form__row
         p.c-contact-form__label * Descreva quais produtos/serviços?
