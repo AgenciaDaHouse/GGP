@@ -15,6 +15,7 @@ var Service = new keystone.List('Service', {
 Service.add({
   name: { type: String, required: true },
   content: { type: Types.Html, wysiwyg: true },
+  extra: { type: Types.Html, wysiwyg: true },
   image: { type: Types.CloudinaryImage }
 })
 

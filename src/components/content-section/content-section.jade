@@ -4,6 +4,7 @@ include ../content-heading/content-heading.jade
 mixin content-section(data, settings)
   - settings = settings || {}
   - image = data.image.url
+  - extra = data.extra
 
   section.c-content-section(class=settings.baseClass || '')
     .c-content-section__wrapper.h-limiter.h-group
@@ -18,3 +19,8 @@ mixin content-section(data, settings)
         +content-heading(data.name)
 
       .c-content-section__content !{data.content}
+
+      if extra
+        input.c-content-section__expander(type='checkbox', id=data.key)
+        label.c-content-section__trigger(for=data.key) Saiba mais...
+        .c-content-section__content.c-content-section__content--extra !{extra}
