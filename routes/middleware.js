@@ -7,13 +7,13 @@ exports.initLocals = function (req, res, next) {
   var locals = res.locals
 
   locals.mainNav = [
-    { label: 'Home', url: '/#intro' },
-    { label: 'Empresa', url: '/#empresa' },
-    { label: 'Serviços', url: '/#servicos' },
-    { label: 'Documentos', url: '/#documentos', modal: true },
-    { label: 'Dúvidas', url: '/#duvidas' },
-    { label: 'Contato', url: '/#contato' },
-    { label: 'Pesquisa Marca', url: '/#pesquisa-marca' }
+    { label: 'Home', url: '#intro' },
+    { label: 'Empresa', url: '#empresa' },
+    { label: 'Serviços', url: '#servicos' },
+    { label: 'Documentos', url: '#documentos', modal: true },
+    { label: 'Dúvidas', url: '#duvidas' },
+    { label: 'Contato', url: '#contato' },
+    { label: 'Pesquisa Marca', url: '#pesquisa-marca' }
   ]
 
   locals.socialNav = [

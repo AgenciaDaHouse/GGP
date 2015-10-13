@@ -3,7 +3,7 @@ include ../content-heading/content-heading.jade
 
 mixin content-section(data, settings)
   - settings = settings || {}
-  - image = data.image.url
+  - image = data.image ? data.image.url : null
   - extra = data.extra
 
   section.c-content-section(class=settings.baseClass || '')

@@ -51,5 +51,9 @@ exports = module.exports = function (req, res) {
     getModel('Question', 'questions', next)
   })
 
+  view.on('init', function (next) {
+    getModel('Document', 'documents', next)
+  })
+
   view.render('index')
 }

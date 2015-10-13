@@ -1,0 +1,9 @@
+//- dependencies
+include ../content-section/content-section
+
+mixin documents()
+  #documentos.c-documents.mfp-hide
+    ul.c-documents__items
+      each item in documents
+        li.c-documents__item
+          +content-section(item, { simpleHeading: true })
