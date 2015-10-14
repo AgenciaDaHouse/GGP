@@ -1,5 +1,5 @@
 mixin contact-form()
-  form.c-contact-form(method='post', action='/contact')
+  form.c-contact-form#form(method='post', action='/contact')
     h3.c-contact-form__heading Pesquise sua marca!
 
     .c-contact-form__wrapper
@@ -37,3 +37,5 @@ mixin contact-form()
         .c-contact-form__controls.h-group
           button.c-contact-form__button(type='submit') Enviar
           button.c-contact-form__button(type='reset') Cancelar
+
+      .c-contact-form__feedback#form-feedback
