@@ -23,8 +23,12 @@
     height 1rem
 
   .c-content-section__wrapper
-    padding-top 2rem
-    padding-bottom 4rem
+    padding-top 1rem
+    padding-bottom 8rem
+
+    +breakpoint(md)
+      padding-top 2rem
+      padding-bottom 4rem
 
   &__items
     margin-top 4rem
@@ -33,6 +37,19 @@
     background #fff
     border-top 0.25rem solid darken(#fff, 15)
     margin-top -6.5rem
+
+    &:first-child
+      padding-top 2rem
+
+      +breakpoint(md)
+        padding-top 0
+
+    &:last-child
+      .c-content-section__wrapper
+        padding-bottom 4rem
+
+        +breakpoint(md)
+          padding-bottom 8rem
 
     &:nth-child(odd)
       transform 'skewY(%s)' % $angle-horz

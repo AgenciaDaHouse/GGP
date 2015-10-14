@@ -5,12 +5,15 @@
   font-size rem(14)
   padding 0.5rem 0.75rem
   position absolute
-  left -12rem
+  left -4rem
   top 0.75rem
   text-align right
   text-transform uppercase
   transform 'skewY(%s)' % $angle-horz
   width 20rem
+
+  +breakpoint(md)
+    left -12rem
 
   &-wrapper
     position relative

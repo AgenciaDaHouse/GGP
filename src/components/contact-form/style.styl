@@ -14,11 +14,13 @@
     &:before
       background $color-accent-darker url(/img/icon.png) no-repeat center
       border-radius 50%
-      content ''
       position absolute
       size 6rem
       left -5rem
       top -1.5rem
+
+      +breakpoint(md)
+        content ''
 
   &__wrapper
     background $color-brand

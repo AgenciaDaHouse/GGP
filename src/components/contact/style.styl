@@ -1,18 +1,28 @@
 .c-contact
-  margin-top 4rem
+  margin-top 2rem
+
+  +breakpoint(md)
+    margin-top 4rem
 
   &__wrapper
-    padding 5rem 8rem 2rem
+    padding-top 5rem
+
+    +breakpoint(md)
+      padding 5rem 8rem 2rem
 
   &__heading
     border 2px dotted
     border-left none
     color $color-text
     font-weight 300
-    margin -7rem 0 2rem
+    margin 0 0 2rem 1rem
     padding 0.75rem 1rem
     position relative
     text-transform uppercase
+
+    +breakpoint(md)
+      margin-left 0
+      margin-top -7rem
 
     &:after,
     &:before

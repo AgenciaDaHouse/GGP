@@ -4,7 +4,7 @@ mixin banner(data)
       each item in data
         - image = item.image
         li.c-banner__item.swiper-slide
-          img.img(src=image.url, width=image.width, height=image.height)
+          img.img(src=image.url)
 
     .swiper-button-next.swiper-button-white.c-banner__nav.c-banner__nav--next
     .swiper-button-prev.swiper-button-white.c-banner__nav.c-banner__nav--prev
