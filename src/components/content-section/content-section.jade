@@ -6,7 +6,7 @@ mixin content-section(data, settings)
   - image = data.image ? data.image.url : null
   - extra = data.extra
 
-  section.c-content-section(class=settings.baseClass || '')
+  section.c-content-section(class=settings.baseClass || '', id=settings.id || '')
     .c-content-section__wrapper.h-limiter.h-group
 
       if image

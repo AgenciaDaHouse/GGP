@@ -4,9 +4,9 @@
  * definitions
  */
 var $window = $(window)
-var $header = $('#c-main-header')
-var $nav = $('#c-main-nav__nav')
-var headerClass = 'c-main-header--small'
+var $header = $('#header')
+var $nav = $('#main-nav__nav')
+var headerClass = 'c-header--small'
 var limit = 20
 
 /**
@@ -29,9 +29,17 @@ $nav.onePageNav({
 })
 
 /**
+ * documents
+ */
+$nav.find('a[data-modal]').magnificPopup({
+  preloader: false,
+  type: 'inline'
+})
+
+/**
  * responsive nav
  */
-$('#c-main-nav__select').on('change', function () {
+$('#main-nav__select').on('change', function () {
   $nav.find('[href="' + this.value + '"]').click()
   $(this).prop('selectedIndex', 0)
 })

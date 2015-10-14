@@ -4,9 +4,13 @@
   &--header
     background $color-accent
     border-radius 0 1rem 1rem 0
+    display none
     margin 0
     padding 1.25rem 1.25rem 1.25rem 1.75rem
     position relative
+
+    +breakpoint(md)
+      display block
 
     &:before
       border-style solid

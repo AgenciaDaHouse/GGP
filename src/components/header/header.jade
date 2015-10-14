@@ -2,15 +2,21 @@
 include ../social-nav/social-nav
 
 mixin header
-  header.c-header
+  header.c-header#header
     .c-header__wrapper.h-limiter
       h1.c-header__logo
         img.img(src='/img/logo.png', alt='GGP Marcas & Patentes')
 
       section.c-header__nav-holder
-        nav.c-header__main-nav#main-nav
+        nav.c-header__main-nav#main-nav__nav
           each item, index in mainNav
-            li.c-header__main-nav__item.h-im(class=!index ? 'active' : '')
-              a.c-header__main-nav__link(href=item.url, title=item.label, class=!index ? 'active' : '', data-modal=item.modal) #{item.label}
+            li.c-header__main-nav__item.h-im
+              a.c-header__main-nav__link(href=item.url, title=item.label, class=!index ? 'is-active' : '', data-modal=item.modal) #{item.label}
+
+        select.c-header__select-nav#main-nav__select
+          option Menu
+          each item in mainNav
+            if !item.modal
+              option(value=item.url) #{item.label}
 
         +social-nav('c-social-nav--header')

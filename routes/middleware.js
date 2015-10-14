@@ -13,7 +13,7 @@ exports.initLocals = function (req, res, next) {
     { label: 'Documentos', url: '#documentos', modal: true },
     { label: 'Dúvidas', url: '#duvidas' },
     { label: 'Contato', url: '#contato' },
-    { label: 'Pesquisa Marca', url: '#pesquisa-marca' }
+    { label: 'Pesquisa Marca', url: '#contato' }
   ]
 
   locals.socialNav = [
