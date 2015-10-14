@@ -33,11 +33,13 @@
 
   &__trigger
     color $color-brand
-    cursor pointer
-    display inline-block
+    padding 0 4rem
     position relative
     top -0.25rem
     text-decoration underline
+
+    label
+      cursor pointer
 
   &__content
     font-size rem(14)
@@ -45,7 +47,7 @@
     padding 1rem 4rem
 
     &--extra
-      padding 0 4rem 4rem
+      padding 0 4rem 6rem
 
   h3
     margin 1.5rem 0 0.5rem
@@ -55,3 +57,7 @@
 
     &:first-child
       margin-top 0
+
+  ul
+    color $color-brand
+    list-style outside
