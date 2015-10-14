@@ -21,9 +21,10 @@ var Enquiry = new keystone.List('Enquiry', {
 Enquiry.add({
   name: { type: Types.Name, required: true },
   email: { type: Types.Email, required: true },
-  city: { type: String },
   phone: { type: String },
-  address: { type: String },
+  register: { type: String },
+  brand: { type: String, required: true },
+  logo: { type: Types.CloudinaryImage },
   message: { type: Types.Markdown, required: true },
   createdAt: { type: Date, default: Date.now }
 })

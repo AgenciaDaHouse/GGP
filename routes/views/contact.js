@@ -29,7 +29,7 @@ exports = module.exports = function(req, res) {
   // updater
   updater.process(req.body, {
     flashErrors: true,
-    fields: 'name, email, phone, city, address, message',
+    fields: 'name, email, phone, register, brand, logo, message',
     errorMessage: 'Houve um problema com sua mensagem:'
   }, function(err) {
     if (err) {
