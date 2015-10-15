@@ -14,7 +14,7 @@ var Enquiry = keystone.list('Enquiry')
 /**
  * public
  */
-exports = module.exports = function(req, res) {
+exports = module.exports = function (req, res) {
 
   var locals = res.locals
   var newEnquiry = new Enquiry.model()
@@ -31,7 +31,7 @@ exports = module.exports = function(req, res) {
     flashErrors: true,
     fields: 'name, email, phone, register, brand, logo, message',
     errorMessage: 'Houve um problema com sua mensagem:'
-  }, function(err) {
+  }, function (err) {
     if (err) {
       locals.validationErrors = err.errors
       return res.send(err)
