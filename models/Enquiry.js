@@ -23,31 +23,31 @@ Enquiry.add({
   email: { type: Types.Email, required: true },
   phone: { type: String },
   register: { type: String },
-  brand: { type: String, required: true },
+  brand: { type: String },
   logo: { type: Types.CloudinaryImage },
-  message: { type: Types.Markdown, required: true },
+  message: { type: Types.Markdown },
   createdAt: { type: Date, default: Date.now }
 })
 
-Enquiry.schema.pre('save', function(next) {
+Enquiry.schema.pre('save', function (next) {
   this.wasNew = this.isNew
   next()
 })
 
-Enquiry.schema.post('save', function() {
+Enquiry.schema.post('save', function () {
   if (this.wasNew) {
     this.sendNotificationEmail()
   }
 })
 
-Enquiry.schema.methods.sendNotificationEmail = function(callback) {
+Enquiry.schema.methods.sendNotificationEmail = function (callback) {
   if (typeof callback !== 'function') {
     callback = function () {}
   }
 
   var enquiry = this
 
-  keystone.list('User').model.find().where('isAdmin', true).exec(function(err, admins) {
+  keystone.list('User').model.find().where('isAdmin', true).exec(function (err, admins) {
     if (err) {
       return callback(err)
     }

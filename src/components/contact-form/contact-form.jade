@@ -20,8 +20,8 @@ mixin contact-form()
         input.c-contact-form__field(type='text', name='register')
 
       .c-contact-form__row
-        p.c-contact-form__label * Nome da marca:
-        input.c-contact-form__field(type='text', name='brand', required)
+        p.c-contact-form__label Nome da marca:
+        input.c-contact-form__field(type='text', name='brand')
 
       .c-contact-form__row
         p.c-contact-form__label Envie seu logotipo (se ouver):
@@ -29,8 +29,8 @@ mixin contact-form()
           input.c-contact-form__field(type='file', name='logo_upload')
 
       .c-contact-form__row
-        p.c-contact-form__label * Descreva quais produtos/serviços?
-        textarea.c-contact-form__field.c-contact-form__field--textarea(name='message', required)
+        p.c-contact-form__label Descreva quais produtos/serviços?
+        textarea.c-contact-form__field.c-contact-form__field--textarea(name='message')
 
       .c-contact-form__row.h-group
         p.c-contact-form__info * Preenchimento obrigatório
