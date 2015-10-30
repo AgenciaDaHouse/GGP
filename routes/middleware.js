@@ -12,14 +12,11 @@ exports.initLocals = function (req, res, next) {
     { label: 'Serviços', url: '#servicos' },
     { label: 'Documentos', url: '#documentos', modal: true },
     { label: 'Dúvidas', url: '#duvidas' },
-    { label: 'Contato', url: '#contato' },
-    { label: 'Pesquisa Marca', url: '#contato' }
+    { label: 'Contato / Pesquisa Marca', url: '#contato' }
   ]
 
   locals.socialNav = [
-    { label: 'Facebook', icon: 'facebook', url: 'https://fb.com/ggp' },
-    { label: 'Skype', icon: 'skype', url: 'https://skype.com/ggp' },
-    { label: 'Instagram', icon: 'instagram', url: 'https://instagram.com/ggp' }
+    { label: 'Facebook', icon: 'facebook', url: 'https://fb.com/ggp' }
   ]
 
   locals.email = 'contato@ggp.com.br'

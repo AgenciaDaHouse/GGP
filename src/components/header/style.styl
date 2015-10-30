@@ -1,19 +1,22 @@
 .c-header
   background $color-brand
-  padding-bottom 6rem
+  border-bottom 0.65rem solid $color-accent-darker
+  position fixed
+  width 100%
+  z-index 2
+
+  &:after
+    background $color-accent
+    content ''
+    display block
+    size 100% 0.85rem
 
   &__wrapper
     display flex
 
   &__logo
-    background #fff
-    padding 2.5rem 2rem 2rem
-    margin-top -0.5rem
-    transform skewX(-15deg) 'skewY(%s)' % $angle-horz
-
-    .img
-      backface-visibility hidden
-      transform skewX(15deg) 'skewY(%s)' % ($angle-horz *-1)
+    img
+      display block
 
   &__nav-holder
     align-items center
@@ -36,14 +39,15 @@
         content: '|'
         margin-left 0.3rem
 
+      &.is-active
+        .c-header__main-nav__link
+          background $color-accent
+          color $color-brand
+          padding 0.25rem 0.5rem
+
     &__link
       font-size rem(14)
       text-transform uppercase
-
-      &.is.active
-        background $color-accent
-        color $color-brand
-        padding 0.25rem 0.5rem
 
   &__select-nav
     display block

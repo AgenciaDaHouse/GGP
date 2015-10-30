@@ -6,15 +6,15 @@ include ../map/map
 include ../social-nav/social-nav
 
 mixin contact()
-  .c-contact#contato
+  .c-contact
+    .h-anchor#contato
     +content-heading('Contato | Pesquise sua marca', true)
 
     .c-contact__wrapper.h-limiter
       .u-grid.u-grid--doubled-gutter
         .u-grid__cell.u-grid__cell--1-2
-          +address()
-          +social-nav
-          +map()
+          +address
+          +map
 
         .u-grid__cell.u-grid__cell--1-2
           h3.c-contact__heading Solicite uma pesquisa sobre a sua marca de forma rápida e fácil.

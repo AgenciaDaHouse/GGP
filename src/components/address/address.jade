@@ -10,7 +10,7 @@ mixin address()
     .c-address__group.u-grid.u-grid--no-gutter.u-grid--not-responsive
       i.c-address__icon.u-icon phone
       .c-address__content.u-grid__cell
-        p
+        p.c-address__text
           span 43
           = ' 3324-8571'
 
@@ -18,4 +18,9 @@ mixin address()
       i.c-address__icon.u-icon envelope
       .c-address__content.u-grid__cell
         - email= 'contato@ggpmarcas.com.br'
-        a(href='mailto:#{email}') #{email}
+        a.c-address__text(href='mailto:#{email}') #{email}
+        
+    .c-address__group.u-grid.u-grid--no-gutter.u-grid--not-responsive
+      i.c-address__icon.u-icon facebook
+      .c-address__content.u-grid__cell
+        a.c-address__text(href='https://facebook.com/ggpmarcas') /ggpmarcas

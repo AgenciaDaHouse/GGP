@@ -1,20 +1,9 @@
 .c-content-heading
   background-image linear-gradient(to left, $color-text, rgba($color-text, 0))
-  backface-visibility hidden
   color #fff
   font-size rem(14)
+  margin 0 0 1rem -8rem
   padding 0.5rem 0.75rem
-  position absolute
-  left -4rem
-  top 0.75rem
   text-align right
   text-transform uppercase
-  transform 'skewY(%s)' % $angle-horz
   width 20rem
-
-  +breakpoint(md)
-    left -12rem
-
-  &-wrapper
-    position relative
-    z-index 1

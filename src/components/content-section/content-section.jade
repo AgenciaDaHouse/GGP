@@ -3,11 +3,14 @@ include ../content-heading/content-heading.jade
 
 mixin content-section(data, settings)
   - settings = settings || {}
+  - id = settings.id
   - image = data.image ? data.image.url : null
   - extra = data.extra
 
-  section.c-content-section(class=settings.baseClass || '', id=settings.id || '')
+  section.c-content-section(class=settings.baseClass || '')
     .c-content-section__wrapper.h-limiter.h-group
+      if id
+        .h-anchor(id=id)
 
       if image
         figure.c-content-section__image(class=settings.imageClass || '')
