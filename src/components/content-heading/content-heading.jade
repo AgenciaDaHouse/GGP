@@ -1,6 +1,6 @@
-mixin content-heading(heading, hasWrapper)
+mixin content-heading(heading, hasWrapper, baseClass)
   if hasWrapper
-    header.c-content-heading-wrapper.h-limiter
+    header.c-content-heading-wrapper.h-limiter(class=baseClass || '')
       h2.c-content-heading #{heading}
   else
     h2.c-content-heading #{heading}

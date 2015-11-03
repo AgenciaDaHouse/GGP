@@ -5,7 +5,7 @@ include ../content-section/content-section
 mixin services()
   .c-services
     .h-anchor#servicos
-    +content-heading('Serviços', true)
+    +content-heading('Serviços', true, 'c-services__header')
 
     ul.c-services__items
       - serviceSettings = { simpleHeading: true, baseClass: 'c-services__item-content', imageClass: 'c-services__item-image' }
