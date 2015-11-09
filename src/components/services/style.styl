@@ -1,6 +1,7 @@
 .c-services
   $imageMargin= 2rem
 
+  margin-bottom 4rem
   position relative
 
   &:before,
@@ -8,7 +9,6 @@
     content ''
     position absolute
     width 100%
-    transform 'skewY(%s)' % $angle-horz
     z-index 1
 
   &:before
@@ -52,9 +52,6 @@
     &:last-child
       .c-content-section__wrapper
         padding-bottom 4rem
-
-        +breakpoint(md)
-          padding-bottom 8rem
 
     &:nth-child(odd)
       transform 'skewY(%s)' % $angle-horz

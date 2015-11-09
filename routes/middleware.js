@@ -11,8 +11,8 @@ exports.initLocals = function (req, res, next) {
     { label: 'Empresa', url: '#empresa' },
     { label: 'Serviços', url: '#servicos' },
     { label: 'Clientes', url: '#clientes' },
-    { label: 'Documentos', url: '#documentos', modal: true },
     { label: 'Dúvidas', url: '#duvidas' },
+    { label: 'Documentos', url: '#documentos', modal: true },
     { label: 'Contato / Pesquisa Marca', url: '#contato' }
   ]
 
