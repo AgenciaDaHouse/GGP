@@ -10,6 +10,7 @@ exports.initLocals = function (req, res, next) {
     { label: 'Home', url: '#intro' },
     { label: 'Empresa', url: '#empresa' },
     { label: 'Serviços', url: '#servicos' },
+    { label: 'Clientes', url: '#clientes' },
     { label: 'Documentos', url: '#documentos', modal: true },
     { label: 'Dúvidas', url: '#duvidas' },
     { label: 'Contato / Pesquisa Marca', url: '#contato' }

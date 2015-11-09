@@ -16,7 +16,6 @@ mixin header
         select.c-header__select-nav#main-nav__select
           option Menu
           each item in mainNav
-            if !item.modal
-              option(value=item.url) #{item.label}
+            option(value=item.url) #{item.label}
 
         +social-nav('c-social-nav--header')
