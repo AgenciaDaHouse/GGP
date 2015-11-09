@@ -17,7 +17,7 @@ exports.initLocals = function (req, res, next) {
   ]
 
   locals.socialNav = [
-    { label: 'Facebook', icon: 'facebook', url: 'https://fb.com/ggp' }
+    { label: 'Facebook', icon: 'facebook', url: 'https://fb.com/ggpmarcas' }
   ]
 
   locals.email = 'contato@ggp.com.br'
