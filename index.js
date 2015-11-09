@@ -49,7 +49,7 @@ keystone.set('routes', require('./routes'))
 
 // Email locals
 keystone.set('email locals', {
-  logo_src: '/img/logo.png',
+  logo_src: 'logo.png',
   logo_width: 247,
   logo_height: 70,
   theme: {
