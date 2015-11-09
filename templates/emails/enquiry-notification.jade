@@ -1,6 +1,6 @@
-extends /layouts/default
+extends /layouts/email
 
-block body-contents
+block content
   h1 Olá *|first_name|*,
   p.text-larger Um contato foi enviado para #{brand}:
 
@@ -18,13 +18,18 @@ block body-contents
   if enquiry.phone
     p.text-larger Telefone: #{enquiry.phone}
 
-  if enquiry.address
-    p.text-larger Endereço: #{enquiry.address}
+  if enquiry.register
+    p.text-larger CPF/CNPJ: #{enquiry.register}
 
-  if enquiry.city
-    p.text-larger Cidade: #{enquiry.city}
+  if enquiry.brand
+    p.text-larger Nome da marca: #{enquiry.brand}
+
+  if enquiry.logo
+    p.text-larger Logo: 
+    img(src=enquiry.logo.url)
 
   if enquiry.message
+    p.text-larger Messagem:
     .text-larger !{enquiry.message.html}
 
   p.text-muted Enviado em #{enquiry._.createdAt.format()}

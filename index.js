@@ -54,10 +54,10 @@ keystone.set('email locals', {
   logo_height: 70,
   theme: {
     email_bg: '#f3f3f3',
-    link_color: '#0069b4',
+    link_color: '#052746',
     buttons: {
       color: '#fff',
-      background_color: '#0069b4',
+      background_color: '#052746',
       border_color: '#ccc'
     }
   }
@@ -66,10 +66,10 @@ keystone.set('email locals', {
 // Email rules
 keystone.set('email rules', [{
   find: '/images/',
-  replace: (keystone.get('env') === 'production') ? 'http://ggp.herokuapp.com/img/' : 'http://localhost:3000/img/'
+  replace: (keystone.get('env') === 'production') ? 'http://ggpmarcas.com.br/img/' : 'http://localhost:3000/img/'
 }, {
   find: '/keystone/',
-  replace: (keystone.get('env') === 'production') ? 'http://ggp.herokuapp.com/keystone/' : 'http://localhost:3000/keystone/'
+  replace: (keystone.get('env') === 'production') ? 'http://ggpmarcas.com.br/keystone/' : 'http://localhost:3000/keystone/'
 }])
 
 // Email tests
