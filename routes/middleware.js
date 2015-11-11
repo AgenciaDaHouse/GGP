@@ -20,7 +20,7 @@ exports.initLocals = function (req, res, next) {
     { label: 'Facebook', icon: 'facebook', url: 'https://fb.com/ggpmarcas' }
   ]
 
-  locals.email = 'contato@ggp.com.br'
+  locals.email = 'ggp@ggpmarcas.com.br'
   locals.user = req.user
   next()
 }
