@@ -49,11 +49,11 @@ keystone.set('routes', require('./routes'))
 
 // Email locals
 keystone.set('email locals', {
-  logo_src: 'logo.png',
-  logo_width: 247,
-  logo_height: 70,
+  logo_src: '/img/logo-email.png',
+  logo_width: 230,
+  logo_height: 85,
   theme: {
-    email_bg: '#f3f3f3',
+    email_bg: '#fff',
     link_color: '#052746',
     buttons: {
       color: '#fff',
@@ -65,7 +65,7 @@ keystone.set('email locals', {
 
 // Email rules
 keystone.set('email rules', [{
-  find: '/images/',
+  find: '/img/',
   replace: (keystone.get('env') === 'production') ? 'http://ggpmarcas.com.br/img/' : 'http://localhost:3000/img/'
 }, {
   find: '/keystone/',
