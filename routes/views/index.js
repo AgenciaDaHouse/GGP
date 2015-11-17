@@ -44,7 +44,14 @@ exports = module.exports = function (req, res) {
   })
 
   view.on('init', function (next) {
-    getModel('Client', 'clients', next)
+    getModel('Client', function (err, results) {
+      locals.clients = []
+
+      while (results.length)
+        locals.clients.push(results.splice(0, 9))
+
+      next(err)
+    })
   })
 
   view.on('init', function (next) {

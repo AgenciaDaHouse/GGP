@@ -7,7 +7,14 @@ mixin clients()
     +content-heading('Clientes', true)
 
     .c-clients__wrapper.h-limiter
-      ul.u-grid
-        each item in clients
-          li.c-clients__item.u-grid__cell.u-grid__cell--1-3
-            img(src=item.image.url, alt=item.name, title=item.name)
+      #c-clients__container.swiper-container
+        .swiper-wrapper(style='box-sizing: border-box')
+          each group in clients
+            .swiper-slide
+              ul.u-grid
+                each item in group
+                  li.c-clients__item.u-grid__cell.u-grid__cell--1-3
+                    img(src=item.image.url, alt=item.name, title=item.name)
+
+        .swiper-button-next.swiper-button-black
+        .swiper-button-prev.swiper-button-black
