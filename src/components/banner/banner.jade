@@ -3,8 +3,10 @@ mixin banner(data)
     ul.c-banner__items.swiper-wrapper
       each item in data
         - image = item.image
+        - url = item.url
         li.c-banner__item.swiper-slide
-          img.img(src=image.url)
+          #{ url ? 'a' : 'span' }(href=url || null)
+            img.img(src=image.url)
 
     .swiper-button-next.swiper-button-white.c-banner__nav.c-banner__nav--next
     .swiper-button-prev.swiper-button-white.c-banner__nav.c-banner__nav--prev
